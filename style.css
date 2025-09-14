@@ -33,7 +33,7 @@ body {
 }
 
 .feature-img {
-  max-width: 100px;  /* 🔧 Change to your preferred size */
+  max-width: 50px;  /* 🔧 Change to your preferred size */
   height: auto;      /* Keeps aspect ratio */
   display: block;
   margin: 0 auto;    /* Centers the image */
