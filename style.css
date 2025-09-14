@@ -33,11 +33,10 @@ body {
 }
 
 .feature-img {
-  max-width: 250px;
+  max-width: 100px;  /* 🔧 Change to your preferred size */
+  height: auto;      /* Keeps aspect ratio */
   display: block;
-  margin: 20px auto;
-  border: 5px solid var(--accent-color);
-  border-radius: 12px;
+  margin: 0 auto;    /* Centers the image */
 }
 
 h2 {
