@@ -1,0 +1,64 @@
+/* ==== Vintage Theme Styling ==== */
+:root {
+  --bg-color: #f9f5e3;   /* 🔧 EDIT: Background color */
+  --text-color: #3b2c20; /* 🔧 EDIT: Text color */
+  --accent-color: #8b5e3c; /* 🔧 EDIT: Buttons, headers */
+  --font-main: "Georgia", serif; /* 🔧 EDIT: Change to another vintage-style font */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.site-header {
+  text-align: center;
+  border-bottom: 2px solid var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.site-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: var(--accent-color);
+}
+
+.tagline {
+  font-style: italic;
+  color: #6d4c32;
+}
+
+.feature-img {
+  max-width: 250px;
+  display: block;
+  margin: 20px auto;
+  border: 5px solid var(--accent-color);
+  border-radius: 12px;
+}
+
+h2 {
+  color: var(--accent-color);
+  border-bottom: 1px dashed var(--accent-color);
+  padding-bottom: 5px;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 2px solid var(--accent-color);
+  padding-top: 10px;
+}
