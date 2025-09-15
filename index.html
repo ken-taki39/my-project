@@ -3,49 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ken-taki39's Project</title> <!-- 🔧 EDIT: Site title shown in browser tab -->
+  <title>Retro 80s — My Vintage Project</title>
+
+  <!-- Google Fonts (80s feel) -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#0b0712">
 </head>
 <body>
-  <header class="site-header">
-    <h1>My Project</h1> <!-- 🔧 EDIT: Main title -->
-    <p class="tagline">My very first Project on GitHub</p> <!-- 🔧 EDIT: Subtitle -->
+  <div class="grain"></div> <!-- subtle film grain overlay -->
+
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="#">Retro<span class="accent">Wave</span></a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="intro">
-      <img src="adorable-black-white-kitty-with-monochrome-wall-her.jpg" alt="Project Image" class="feature-img" />
-      <!-- 🔧 EDIT: Replace image path with your own, or remove this line -->
-      <p>
-        Welcome to my project!
-        <!-- 🔧 EDIT: Replace this text with your project intro -->
-      </p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1 class="neon">Welcome to the 1980s Retro Lab</h1>
+          <p class="lead">A vintage-styled project site — synthwave vibes, neon glow, and retro pixel polish.</p>
+          <div class="cta-row">
+            <a class="btn" href="#gallery">View Gallery</a>
+            <a class="btn outline" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <!-- EDIT: Replace with your image / illustration -->
+          <img src="images/hero-vhs.png" alt="Hero image" class="feature-img">
+        </div>
+      </div>
     </section>
 
-    <section class="details">
-      <h2>About This Project</h2> <!-- 🔧 EDIT: Section title -->
-      <p>
-        This project was created to fulfill and document about MONITOR 2025 UIN SGD.  
-        <!-- 🔧 EDIT: Replace with description of your project -->
-      </p>
+    <!-- ABOUT -->
+    <section id="about" class="panel">
+      <div class="container">
+        <h2>About This Project</h2>
+        <p>Edit this paragraph in <code>index.html</code>. Explain your project, era inspiration, links, or credits. Keep it short and punchy — 80s style!</p>
+      </div>
     </section>
 
-    <section class="links">
-      <h2>My Profiles!</h2>
-      <ul>
-        <li><a href="https://github.com/ken-taki39">GitHub Profile</a></li>
-        <!-- 🔧 EDIT: Add/remove project links -->
-        <li><a href="https://instagram.com/ke_na_r_">Instagram Profile</a></li>
-      </ul>
+    <!-- GALLERY -->
+    <section id="gallery" class="panel">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="grid gallery-grid">
+          <!-- Put images into /images/ and reference below. Use class img-thumb -->
+          <img src="images/thumb1.jpg" alt="thumb 1" class="img-thumb" />
+          <img src="images/thumb2.jpg" alt="thumb 2" class="img-thumb" />
+          <img src="images/thumb3.jpg" alt="thumb 3" class="img-thumb" />
+          <img src="images/thumb4.jpg" alt="thumb 4" class="img-thumb" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="panel">
+      <div class="container contact-grid">
+        <div>
+          <h2>Contact</h2>
+          <p>Fill the form to send a message. This uses a free Formspree endpoint by default — see instructions below to swap to your backend.</p>
+          <form id="contactForm" class="form">
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" placeholder="Your name" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" placeholder="you@example.com" required>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="Write something rad..." required></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn">Send</button>
+            </div>
+
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="contact-aside">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Demo</a></li>
+          </ul>
+          <p class="small">© <span id="year"></span> Your Name — Crafted with neon & nostalgia.</p>
+        </aside>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <small>© 2025 Keenan — Made with ❤️ and GitHub Pages</small>
-    <!-- 🔧 EDIT: Replace with your name -->
+  <footer class="footer">
+    <div class="container">
+      <small>Made with ❤️ — Retro 80s Theme</small>
+    </div>
   </footer>
+
+  <!-- Modal for gallery -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <button id="modalClose" class="modal-close" aria-label="Close">×</button>
+    <img id="modalImg" src="" alt="">
+    <p id="modalCaption"></p>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
