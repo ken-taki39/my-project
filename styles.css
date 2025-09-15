@@ -1,63 +1,93 @@
-/* ==== Vintage Theme Styling ==== */
-:root {
-  --bg-color: #f9f5e3;   /* 🔧 EDIT: Background color */
-  --text-color: #3b2c20; /* 🔧 EDIT: Text color */
-  --accent-color: #8b5e3c; /* 🔧 EDIT: Buttons, headers */
-  --font-main: "Georgia", serif; /* 🔧 EDIT: Change to another vintage-style font */
+/* ===== Retro 1980s Theme (synthwave/neon) ===== */
+:root{
+  --bg: #0b0712;            /* deep night */
+  --paper: #100c16;         /* panel background */
+  --text: #e9d7ff;          /* pale neon */
+  --muted: #cbb6e6;
+  --accent: #ff3cac;        /* hot pink */
+  --accent-2: #00ffd5;      /* cyan */
+  --glass: rgba(255,255,255,0.04);
+  --radius: 12px;
+  --container: 1100px;
+  --font-head: 'Press Start 2P', monospace;
+  --font-ui: 'Montserrat', sans-serif;
 }
 
-body {
-  margin: 0;
-  font-family: var(--font-main);
-  background: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
-  padding: 20px;
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font-ui);
+  background:
+    radial-gradient(1000px 400px at 10% 20%, rgba(255,60,172,0.06), transparent 8%),
+    radial-gradient(900px 300px at 90% 80%, rgba(0,255,213,0.03), transparent 8%),
+    var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
 }
 
-.site-header {
-  text-align: center;
-  border-bottom: 2px solid var(--accent-color);
-  margin-bottom: 20px;
+/* subtle grain overlay */
+.grain{
+  pointer-events:none;
+  position:fixed; inset:0; z-index:1;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="g"><feTurbulence baseFrequency="0.9" numOctaves="1" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23g)" opacity="0.03" fill="black"/></svg>');
+  mix-blend-mode:overlay;
 }
 
-.site-header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  color: var(--accent-color);
-}
+/* layout */
+.container{max-width:var(--container); margin:0 auto; padding:24px;}
+.nav{position:sticky; top:0; z-index:50; background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.1)); border-bottom:1px solid rgba(255,255,255,0.03);}
+.nav .container{display:flex;align-items:center;justify-content:space-between;}
+.brand{font-family:var(--font-head); font-size:1rem; letter-spacing:1px; text-decoration:none; color:var(--text)}
+.brand .accent{color:var(--accent)}
+.nav-links a{color:var(--muted); text-decoration:none; margin-left:18px; font-weight:600; font-size:0.9rem}
+.nav-links a:hover{color:var(--accent-2)}
 
-.tagline {
-  font-style: italic;
-  color: #6d4c32;
-}
+/* hero */
+.hero{padding:56px 0; position:relative; z-index:2;}
+.hero-grid{display:grid; grid-template-columns:1fr 420px; gap:32px; align-items:center;}
+.hero-text h1{font-family:var(--font-head); margin:0; font-size:1.5rem; line-height:1.05; color:var(--accent); text-shadow:0 6px 24px rgba(255,60,172,0.12), 0 0 12px rgba(255,60,172,0.08);}
+.lead{margin-top:12px; color:var(--muted); max-width:600px}
+.cta-row{margin-top:20px;}
+.btn{display:inline-block; padding:12px 18px; border-radius:10px; background:linear-gradient(90deg,var(--accent), #ff8ab0); color:#111; font-weight:700; text-decoration:none; margin-right:12px; box-shadow:0 8px 30px rgba(255,60,172,0.08); border:none; cursor:pointer;}
+.btn.outline{background:transparent; color:var(--accent); border:1px solid rgba(255,255,255,0.06); box-shadow:none}
+.hero-art .feature-img{width:100%; max-width:380px; height:auto; border-radius:10px; border:4px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.6); display:block; margin-left:auto;}
 
-.feature-img {
-  width: 1000px;   /* 🔧 Change number to adjust size */
-  height: auto;   /* Keeps proportions */
-  display: block;
-  margin: 0 auto; /* Centers image */
-}
+/* panels */
+.panel{padding:40px 0}
+.panel h2{font-family:var(--font-head); color:var(--accent); margin-top:0; font-size:1rem; display:inline-block; border-bottom:2px dashed rgba(255,255,255,0.03); padding-bottom:8px}
+.grid{display:grid; gap:16px}
+.gallery-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); align-items:center}
+.img-thumb{width:100%; height:160px; object-fit:cover; border-radius:8px; cursor:pointer; transition:transform .22s ease, box-shadow .22s ease; border:3px solid var(--glass)}
+.img-thumb:hover{transform:translateY(-6px); box-shadow:0 12px 36px rgba(0,0,0,0.6)}
 
-h2 {
-  color: var(--accent-color);
-  border-bottom: 1px dashed var(--accent-color);
-  padding-bottom: 5px;
-}
+/* contact */
+.contact-grid{display:grid; grid-template-columns:1fr 320px; gap:32px; align-items:start;}
+.form label{display:block; margin-bottom:12px; color:var(--muted)}
+.form input, .form textarea{width:100%; padding:12px; border-radius:8px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.03); color:var(--text); min-height:44px}
+.form textarea{resize:vertical}
+.form-actions{margin-top:12px}
+.form-status{margin-top:12px; color:var(--muted)}
 
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-}
+/* aside */
+.contact-aside{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.02)}
+.contact-aside a{color:var(--accent-2); text-decoration:none}
 
-a:hover {
-  text-decoration: underline;
-}
+/* modal */
+.modal{position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.7); z-index:999; opacity:0; pointer-events:none; transition:opacity .18s ease}
+.modal[aria-hidden="false"]{opacity:1; pointer-events:auto}
+.modal img{max-width:90%; max-height:80%; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,0.8)}
+.modal-close{position:absolute; top:28px; right:28px; background:transparent; color:var(--text); font-size:2rem; border:none; cursor:pointer}
 
-footer {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 0.9rem;
-  border-top: 2px solid var(--accent-color);
-  padding-top: 10px;
+/* footer */
+.footer{padding:18px 0; border-top:1px solid rgba(255,255,255,0.03); text-align:center; color:var(--muted)}
+
+/* responsiveness */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
 }
