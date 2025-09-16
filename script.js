@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== EDIT: If using Formspree, replace endpoint below with YOUR form endpoint =====
     // Example Formspree endpoint (replace with your own): https://formspree.io/f/yourid
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xdklvzje';
 
     const formData = new FormData(form);
     try {
