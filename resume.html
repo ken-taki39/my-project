@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Resume</title>
-  <link rel="stylesheet" href="styles.css"> <!-- keep using your retro CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="retro">
 
   <div class="container">
-    <h1 class="retro-title">My Resume</h1>
+    <!-- Hero Image Section -->
+    <div class="resume-hero retro-box">
+      <img id="resumeHeroImg" src="images/thumb1.jpg" alt="Hero Image" class="resume-hero-img" />
+      <h1 class="retro-title">My Resume</h1>
+    </div>
 
     <section class="retro-box">
       <h2>About Me</h2>
@@ -44,5 +48,15 @@
     <a href="index.html" class="retro-link">← Back to Gallery</a>
   </div>
 
+  <script>
+    // Get query parameter (?img=...)
+    const params = new URLSearchParams(window.location.search);
+    const img = params.get("img");
+
+    // Replace hero image if provided
+    if (img) {
+      document.getElementById("resumeHeroImg").src = "images/" + img;
+    }
+  </script>
 </body>
 </html>
