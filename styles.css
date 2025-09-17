@@ -109,7 +109,15 @@ body{
   transition: all 0.35s ease;
 }
 
-.nav .hero-container{display:flex; align-items:center; justify-content:space-between;}
+.nav .hero-container {
+  width: 100%;
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
 .brand{
   font-family:var(--font-head);
   font-size:1rem;
