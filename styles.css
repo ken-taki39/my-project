@@ -60,6 +60,7 @@ body{
 .nav-links a:hover{color:var(--accent); text-shadow:0 0 8px var(--accent)}
 
 /* hero */
+/* hero */
 .hero {
   padding: 80px 0;
   text-align: center;
@@ -125,7 +126,9 @@ body{
   max-width: 100%;   /* responsive */
   height: auto;
   border-radius: 12px; /* rounded corners */
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4); /* neon glow */
+  box-shadow: 
+    0 0 12px var(--accent),
+    0 0 20px var(--accent-2); /* neon glow tied to theme */
   animation: floaty 4s ease-in-out infinite; /* float animation */
 }
 
@@ -133,7 +136,6 @@ body{
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-10px); }
 }
-
 
 /* buttons */
 .btn{
