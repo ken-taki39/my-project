@@ -205,36 +205,53 @@ body{
 }
 
 /* resume sections */
+/* =============================
+   Resume Sections (Upgraded)
+============================= */
 .retro-box {
   background: var(--paper);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
-  padding: 28px;
-  margin-bottom: 24px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.6),
-              0 0 12px rgba(255, 60, 172, 0.2); /* subtle neon glow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 32px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 0 18px rgba(0, 0, 0, 0.7),
+    0 0 16px rgba(255, 60, 172, 0.25),
+    inset 0 0 6px rgba(0, 255, 213, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.retro-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,60,172,0.05), rgba(0,255,213,0.05));
+  pointer-events: none;
 }
 
 .retro-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 22px rgba(0, 255, 213, 0.4),
-              0 0 28px rgba(255, 60, 172, 0.3);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 
+    0 0 26px rgba(0, 255, 213, 0.5),
+    0 0 36px rgba(255, 60, 172, 0.4);
 }
 
-/* headings */
+/* Section Headings */
 .retro-box h2 {
   color: var(--accent-2);
   font-family: var(--font-head);
-  font-size: 1rem;
-  letter-spacing: 1px;
-  margin-bottom: 14px;
+  font-size: 1.1rem;
+  letter-spacing: 1.2px;
+  margin-bottom: 16px;
+  padding-left: 12px;
   border-left: 4px solid var(--accent);
-  padding-left: 10px;
-  text-shadow: 0 0 6px var(--accent-2);
+  text-shadow: 0 0 8px var(--accent-2), 0 0 4px rgba(0,0,0,0.6);
+  text-transform: uppercase;
 }
 
-/* lists inside resume */
+/* Resume Lists */
 .retro-box ul {
   list-style: none;
   padding-left: 0;
@@ -242,10 +259,13 @@ body{
 }
 
 .retro-box ul li {
-  margin: 8px 0;
-  padding-left: 16px;
+  margin: 10px 0;
+  padding-left: 20px;
   position: relative;
   font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ddd;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .retro-box ul li::before {
@@ -253,16 +273,23 @@ body{
   position: absolute;
   left: 0;
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   top: 3px;
+  text-shadow: 0 0 6px var(--accent);
 }
 
-/* footer */
+.retro-box ul li:hover {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+/* Footer */
 .footer {
-  padding: 18px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
   color: var(--muted);
   font-size: 0.85rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
+  text-shadow: 0 0 6px rgba(0,0,0,0.6);
 }
