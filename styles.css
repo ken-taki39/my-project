@@ -255,6 +255,7 @@ body{
 }
 
 /* resume sections */
+/* Resume Boxes */
 .retro-box {
   background: var(--paper);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -290,12 +291,22 @@ body{
   color: var(--accent-2);
   font-family: var(--font-head);
   font-size: 1.1rem;
-  letter-spacing: 1.2px;
-  margin-bottom: 16px;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
   padding-left: 12px;
   border-left: 4px solid var(--accent);
   text-shadow: 0 0 8px var(--accent-2), 0 0 4px rgba(0,0,0,0.6);
   text-transform: uppercase;
+  position: relative;
+}
+
+.retro-box h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-top: 6px;
+  background: linear-gradient(90deg, var(--accent), transparent);
 }
 
 /* Resume Lists */
@@ -310,13 +321,13 @@ body{
   padding-left: 20px;
   position: relative;
   font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #ddd;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .retro-box ul li::before {
-  content: "◆"; /* retro pixel diamond */
+  content: "◆";
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -328,15 +339,78 @@ body{
 .retro-box ul li:hover {
   color: var(--accent);
   transform: translateX(4px);
+  text-shadow: 0 0 8px var(--accent), 0 0 14px var(--accent-2);
+}
+
+/* Links inside Resume */
+.retro-box a {
+  color: var(--accent-2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 1px dashed transparent;
+}
+
+.retro-box a:hover {
+  color: var(--accent);
+  border-bottom: 1px dashed var(--accent);
+  text-shadow: 0 0 6px var(--accent), 0 0 14px var(--accent-2);
+}
+
+/* Hero Section */
+.resume-hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.resume-hero-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 20px var(--accent), 0 0 30px var(--accent-2);
+  margin-bottom: 16px;
+}
+
+.retro-title {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: var(--accent-2);
+  text-shadow: 0 0 8px var(--accent), 0 0 16px var(--accent-2);
 }
 
 /* Footer */
-.footer {
-  padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+/* Resume Footer */
+.resume-footer {
   text-align: center;
-  color: var(--muted);
-  font-size: 0.85rem;
-  letter-spacing: 0.6px;
-  text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Back to Gallery Button */
+.retro-back {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: var(--accent-2);
+  text-decoration: none;
+  border: 2px solid var(--accent);
+  background: rgba(0,0,0,0.3);
+  box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent-2);
+  transition: all 0.3s ease;
+}
+
+.retro-back:hover {
+  color: var(--accent);
+  background: rgba(255,60,172,0.1);
+  box-shadow: 0 0 16px var(--accent), 0 0 30px var(--accent-2), 0 0 40px var(--accent);
+  transform: translateY(-3px);
+}
+
 }
