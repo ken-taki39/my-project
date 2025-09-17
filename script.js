@@ -21,12 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
     img.addEventListener('click', () => {
       modalImg.src = img.src;
       modalCaption.textContent = img.alt || '';
-      modal.setAttribute('aria-hidden','false');
+      modal.classList.add('active');
     });
   });
-  modalClose.addEventListener('click', () => modal.setAttribute('aria-hidden','true'));
+  modalClose.addEventListener('click', () => modal.classList.remove('active'));
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.setAttribute('aria-hidden','true');
+    if (e.target === modal) modal.classList.remove('active');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') modal.classList.remove('active');
   });
 
   const form = document.getElementById('contactForm');
