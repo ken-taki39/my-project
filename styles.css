@@ -71,7 +71,7 @@ body{
 
 .container{max-width:var(--container); margin:0 auto; padding:24px; position:relative; z-index:2; background: rgba(16, 12, 22, 0.6); backdrop-filter: blur(6px);
 -webkit-backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.1);}
-.hero-container{width: 100%; margin:0 auto; padding:24px; position:relative; z-index:2; background: rgba(16, 12, 22, 0.6); backdrop-filter: blur(6px);
+.hero-container{width: 100%(--container); margin:0 auto; padding:24px; position:relative; z-index:2; background: rgba(16, 12, 22, 0.6); backdrop-filter: blur(6px);
 -webkit-backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.1);}
 
 .nav{position:sticky; top:0; z-index:50; background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.1)); border-bottom:1px solid rgba(255,255,255,0.03);}
@@ -180,7 +180,6 @@ body{
 .btn:hover{transform:translateY(-4px); box-shadow:0 0 18px rgba(0,255,213,0.6);}
 .btn.outline{background:transparent; border:2px solid var(--accent); color:var(--accent)}
 
-/* panels */
 .panel{padding:40px 0}
 .panel h2{
   font-family:var(--font-head);
@@ -192,7 +191,6 @@ body{
   padding-bottom:8px;
 }
 
-/* gallery */
 .grid {
   display: grid;
   gap: 16px;
@@ -211,7 +209,6 @@ body{
   cursor: pointer;
   transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
 
-  /* neon glow + float animation */
   box-shadow: 
     0 0 12px var(--accent),
     0 0 20px var(--accent-2);
@@ -226,13 +223,11 @@ body{
     0 0 28px var(--accent-2);
 }
 
-/* shared float animation */
 @keyframes floaty {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-10px); }
 }
 
-/* Quick Links (retro neon style) */
 .quick-links {
   list-style: none;
   padding-left: 0;
@@ -282,8 +277,6 @@ body{
   text-shadow: 0 0 6px var(--accent), 0 0 12px var(--accent-2);
 }
 
-/* resume sections */
-/* Resume Boxes */
 .retro-box {
   background: var(--paper);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -314,7 +307,6 @@ body{
     0 0 36px rgba(255, 60, 172, 0.4);
 }
 
-/* Section Headings */
 .retro-box h2 {
   color: var(--accent-2);
   font-family: var(--font-head);
@@ -337,7 +329,6 @@ body{
   background: linear-gradient(90deg, var(--accent), transparent);
 }
 
-/* Resume Lists */
 .retro-box ul {
   list-style: none;
   padding-left: 0;
@@ -370,7 +361,6 @@ body{
   text-shadow: 0 0 8px var(--accent), 0 0 14px var(--accent-2);
 }
 
-/* Links inside Resume */
 .retro-box a {
   color: var(--accent-2);
   text-decoration: none;
@@ -385,7 +375,6 @@ body{
   text-shadow: 0 0 6px var(--accent), 0 0 14px var(--accent-2);
 }
 
-/* Hero Section */
 .resume-hero {
   text-align: center;
   padding: 40px 20px;
@@ -409,8 +398,6 @@ body{
   text-shadow: 0 0 8px var(--accent), 0 0 16px var(--accent-2);
 }
 
-/* Footer */
-/* Resume Footer */
 .resume-footer {
   text-align: center;
   margin-top: 40px;
@@ -418,7 +405,6 @@ body{
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Back to Gallery Button */
 .retro-back {
   display: inline-block;
   padding: 10px 20px;
