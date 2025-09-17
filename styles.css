@@ -204,10 +204,45 @@ body{
   50%      { transform: translateY(-10px); }
 }
 
+/* Quick Links (retro neon style) */
+.retro-subtitle {
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  color: var(--accent-2);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 6px var(--accent-2), 0 0 10px var(--accent);
+}
+
+.quick-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 16px 0;
+}
+
+.quick-links li {
+  margin: 8px 0;
+}
+
+.quick-links a {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.quick-links a:hover {
+  color: var(--accent);
+  border-left: 3px solid var(--accent);
+  text-shadow: 0 0 6px var(--accent), 0 0 14px var(--accent-2);
+  transform: translateX(6px);
+}
+
 /* resume sections */
-/* =============================
-   Resume Sections (Upgraded)
-============================= */
 .retro-box {
   background: var(--paper);
   border: 1px solid rgba(255, 255, 255, 0.1);
