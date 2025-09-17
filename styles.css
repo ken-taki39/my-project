@@ -36,7 +36,8 @@ body{
   color: #fff;
   min-height: 100vh;
   position: relative;
-  overflow: visible;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Starry effect */
