@@ -82,19 +82,41 @@ body{
   justify-content: space-between;
 }
 
-@keyframes synthwave-border {
-  0% {
-    border-image-source: linear-gradient(90deg, rgba(0,255,213,0.7), rgba(255,0,255,0.7), rgba(255,60,60,0.7));
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 calc(var(--glow-size) * 0.6) rgba(0,255,213,var(--glow-alpha)),
+      0 0 calc(var(--glow-size) * 1.0) rgba(255,60,172,var(--glow-alpha-low));
   }
   50% {
-    border-image-source: linear-gradient(180deg, rgba(255,60,60,0.7), rgba(0,255,213,0.7), rgba(255,0,255,0.7));
+    box-shadow:
+      0 0 calc(var(--glow-size) * 1.0) rgba(0,255,213,var(--glow-alpha-hover)),
+      0 0 calc(var(--glow-size) * 1.6) rgba(255,60,172,var(--glow-alpha));
+  }
+}
+
+@keyframes synthwave-border {
+  0% {
+    border-image-source: linear-gradient(
+      90deg, #00ffd5, #ff3cac, #ff00ff, #00ffd5
+    );
   }
   100% {
-    border-image-source: linear-gradient(270deg, rgba(255,0,255,0.7), rgba(255,60,60,0.7), rgba(0,255,213,0.7));
+    border-image-source: linear-gradient(
+      450deg, #00ffd5, #ff3cac, #ff00ff, #00ffd5
+    );
   }
 }
 
 .nav {
+  --border-duration: 6s;
+  --glow-duration: 6s;
+  --glow-size: 16px;
+  --glow-size-hover: 36px;
+  --glow-alpha: 0.30;
+  --glow-alpha-low: 0.25;
+  --glow-alpha-hover: 0.75;
+
   width: 100%;
   padding: 12px 24px;
   position: fixed;
@@ -109,13 +131,10 @@ body{
   border-bottom: 3px solid transparent;
   border-image-slice: 1;
   border-image-source: linear-gradient(
-    90deg,
-    #00ffd5,
-    #ff3cac,
-    #ff00ff,
-    #00ffd5
+    90deg, #00ffd5, #ff3cac, #ff00ff, #00ffd5
   );
-  animation: synthwave-border 6s linear infinite;
+  animation: synthwave-border var(--border-duration) linear infinite,
+             neon-pulse var(--glow-duration) ease-in-out infinite;
 
   box-shadow: 
     0 0 16px rgba(0, 255, 213, 0.3),
@@ -134,7 +153,6 @@ body {
       0 0 24px rgba(0, 255, 213, 0.5),
       0 0 40px rgba(255, 60, 172, 0.4);
   transform: translateY(-2px) scale(1.01);
-  transition: all 0.35s ease;
 }
 
 .nav .hero-container {
