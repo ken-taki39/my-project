@@ -76,7 +76,8 @@ body{
 }
 
 /* layout */
-.container{max-width:var(--container); margin:0 auto; padding:24px; position:relative; z-index:2;}
+.container{max-width:var(--container); margin:0 auto; padding:24px; position:relative; z-index:2; background: rgba(16, 12, 22, 0.6); backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.1);}
 
 /* nav */
 .nav{position:sticky; top:0; z-index:50; background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.1)); border-bottom:1px solid rgba(255,255,255,0.03);}
