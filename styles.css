@@ -89,9 +89,9 @@ body{
   top: 0;
   left: 0;
   z-index: 1000;
-  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.1));
+  background: linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1));
   border-bottom: 1px solid rgba(255,255,255,0.03);
-}
+
 body {padding-top: 60px;}
 
   background: linear-gradient(135deg, rgba(16,12,22,0.6), rgba(16,12,22,0.9));
