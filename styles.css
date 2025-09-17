@@ -28,6 +28,43 @@ body{
   overflow-x:hidden;
 }
 
+/* Synthwave Background */
+.synthwave-bg {
+  background: linear-gradient(180deg, #0a001a 0%, #1a0033 40%, #ff007f 100%);
+  background-attachment: fixed;
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Starry effect */
+.synthwave-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  opacity: 0.3;
+  animation: twinkle 6s infinite alternate;
+}
+
+/* Grid horizon lines */
+.synthwave-bg::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 300px;
+  background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 100% 30px;
+  transform: perspective(200px) rotateX(60deg);
+  opacity: 0.25;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.2; }
+  100% { opacity: 0.4; }
+}
+
 /* grain overlay */
 .grain{
   pointer-events:none;
