@@ -1,9 +1,6 @@
-// Basic retro interactions: image modal, smooth scroll, contact form
 document.addEventListener('DOMContentLoaded', () => {
-  // year
   document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Smooth scroll for in-page links
+  
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
       const href = a.getAttribute('href');
@@ -15,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Gallery modal
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modalImg');
   const modalCaption = document.getElementById('modalCaption');
@@ -33,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === modal) modal.setAttribute('aria-hidden','true');
   });
 
-  // Contact form handling (uses Formspree by default)
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
 
@@ -41,8 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     status.textContent = 'Sending...';
 
-    // ===== EDIT: If using Formspree, replace endpoint below with YOUR form endpoint =====
-    // Example Formspree endpoint (replace with your own): https://formspree.io/f/yourid
     const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xdklvzje';
 
     const formData = new FormData(form);
@@ -64,6 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error(err);
       status.textContent = 'Network error. Try later.';
     }
+  });
+
+  window.addEventListener("scroll", () => {
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("scrolled", window.scrollY > 50);
   });
 
 });
