@@ -60,22 +60,80 @@ body{
 .nav-links a:hover{color:var(--accent); text-shadow:0 0 8px var(--accent)}
 
 /* hero */
-.hero{padding:80px 0; text-align:center;}
-.hero h1{
-  font-family:var(--font-head);
-  font-size:1.8rem;
-  margin:0;
-  background:linear-gradient(90deg,var(--accent),var(--accent-2),var(--accent));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:glow 4s linear infinite;
+.hero {
+  padding: 80px 0;
+  text-align: center;
 }
-@keyframes glow{
-  0%{filter:drop-shadow(0 0 2px var(--accent))}
-  50%{filter:drop-shadow(0 0 12px var(--accent-2))}
-  100%{filter:drop-shadow(0 0 2px var(--accent))}
+
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  margin: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 4s linear infinite;
 }
-.lead{color:var(--muted); margin-top:12px;}
+
+@keyframes glow {
+  0%   { filter: drop-shadow(0 0 2px var(--accent)); }
+  50%  { filter: drop-shadow(0 0 12px var(--accent-2)); }
+  100% { filter: drop-shadow(0 0 2px var(--accent)); }
+}
+
+.lead {
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+/* hero grid layout */
+.hero-grid {
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* mobile-first */
+.hero-text {
+  text-align: center;
+}
+
+.hero-art {
+  text-align: center;
+}
+
+/* desktop side-by-side */
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-art img {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* hero image */
+.feature-img {
+  max-width: 100%;   /* responsive */
+  height: auto;
+  border-radius: 12px; /* rounded corners */
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4); /* neon glow */
+  animation: floaty 4s ease-in-out infinite; /* float animation */
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
 
 /* buttons */
 .btn{
