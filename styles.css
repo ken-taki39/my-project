@@ -530,7 +530,7 @@ body {
   border-bottom: 1px dashed var(--accent);
   text-shadow: 0 0 6px var(--accent), 0 0 14px var(--accent-2);
 }
-.container {
+.container-gallery {
   position: relative;
   z-index: 2;
   max-width: 900px;
