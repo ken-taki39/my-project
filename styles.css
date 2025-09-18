@@ -530,6 +530,41 @@ body {
   border-bottom: 1px dashed var(--accent);
   text-shadow: 0 0 6px var(--accent), 0 0 14px var(--accent-2);
 }
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+
+  background: rgba(16, 12, 22, 0.6);
+  backdrop-filter: blur(8px) saturate(140%);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+
+  border: 2px solid rgba(255, 60, 172, 0.6);
+  box-shadow: 
+    0 0 12px rgba(0, 255, 213, 0.4),
+    0 0 24px rgba(255, 60, 172, 0.3),
+    inset 0 0 20px rgba(0, 255, 213, 0.1);
+
+  color: #00ffd5;
+  text-shadow: 0 0 6px #00ffd5, 0 0 12px #ff3cac;
+  animation: pulseGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 
+      0 0 10px rgba(0, 255, 213, 0.3),
+      0 0 20px rgba(255, 60, 172, 0.2);
+  }
+  100% {
+    box-shadow: 
+      0 0 20px rgba(0, 255, 213, 0.5),
+      0 0 40px rgba(255, 60, 172, 0.4);
+  }
+}
 
 .resume-hero {
   text-align: center;
