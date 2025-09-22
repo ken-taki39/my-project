@@ -134,7 +134,7 @@ body{
   pointer-events: none;
   position: fixed;
   inset: 0;
-  z-index: 1;
+  z-index: 0;
 
   background-image: url('data:image/svg+xml;utf8,
     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
