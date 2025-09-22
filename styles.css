@@ -97,7 +97,7 @@ body{
   background-attachment: fixed;
   color: #fff;
   z-index: -1;
-  overflow: hidden;
+  pointer-events:none;
 }
 
 .synthwave-bg::before {
@@ -135,7 +135,7 @@ body{
   mix-blend-mode:soft-light;
 }
 
-.container{max-width:var(--container); margin:0 auto; padding:24px; position:relative; z-index:2; background: rgba(16, 12, 22, 0.6); backdrop-filter: blur(6px);
+.container{max-width:var(--container); margin:0 auto; padding:2rem; position:relative; z-index:1; background: rgba(16, 12, 22, 0.6); backdrop-filter: blur(6px);
 -webkit-backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.1);}
 
 .hero-container {
