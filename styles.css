@@ -13,7 +13,7 @@
 }
 
 .kotlin-logo {
-  height: 40px; /* adjust size to fit navbar */
+  height: 40px;
   filter: drop-shadow(0 0 6px #00ffd5)
           drop-shadow(0 0 12px #ff3cac)
           drop-shadow(0 0 20px #ff00ff);
@@ -91,13 +91,13 @@ body{
 }
 
 .synthwave-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(180deg, #0a001a 0%, #1a0033 40%, #ff007f 100%);
   background-attachment: fixed;
   color: #fff;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .synthwave-bg::before {
@@ -105,7 +105,7 @@ body{
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  opacity: 0.9;
+  opacity: 0.6;
   animation: twinkle 6s infinite alternate;
 }
 
@@ -113,10 +113,13 @@ body{
   content: "";
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 300px;
-  background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
-  background-size: 100% 30px;
-  transform: perspective(200px) rotateX(60deg);
+  height: 50%;
+  background-image: 
+    linear-gradient(rgba(255, 0, 127, 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 200, 0.45) 1px, transparent 1px);
+  background-size: 100% 30px, 30px 100%;
+  transform: perspective(400px) rotateX(60deg);
+  transform-origin: bottom;
   opacity: 0.45;
 }
 
