@@ -97,7 +97,7 @@ body{
   background: linear-gradient(180deg, #0a001a 0%, #1a0033 40%, #ff007f 100%);
   background-attachment: fixed;
   color: #fff;
-  z-index: -1;
+  z-index: 0;
 }
 
 .synthwave-bg::before {
@@ -134,7 +134,7 @@ body{
   pointer-events: none;
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
 
   background-image: url('data:image/svg+xml;utf8,
     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
@@ -165,7 +165,7 @@ body{
   margin: 2rem auto;
   padding: 2rem;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   background: rgba(16, 12, 22, 0.65);
   backdrop-filter: blur(10px);
