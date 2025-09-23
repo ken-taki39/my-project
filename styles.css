@@ -204,6 +204,7 @@ body{
 }
 
 .hero-container {
+  index-z: 2;
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
