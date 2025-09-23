@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="styles.css" />
   <meta name="theme-color" content="#0b0712">
 </head>
-
 <body class="retro">
   <div class="synthwave-bg"></div>
   <div class="grain"></div>
@@ -24,136 +23,127 @@
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
+        <a href="#resume">Resume</a>
       </nav>
     </div>
   </header>
 
-  <div class="container">
-    <main>
+  <section id="top" class="hero">
+    <div class="container">
+      <div class="sub-container hero-grid">
+        <div class="hero-text">
+          <h1 class="neon">MONITOR 2k25</h1>
+          <p class="lead">Masa Orientasi Mahasiswa Baru <strong>Teknik Informatika</strong><br>UIN Sunan Gunung Djati Bandung.</p>
+          <p class="tagline">“Membentuk Mahasiswa Teknik Informatika yang <strong>Sakti</strong> dan <strong>Berdaya Saing</strong> dalam Melawan Disrupsi Digital di Era <span class="accent">Society 5.0</span>.”</p>
+          <div class="cta-row">
+            <a class="btn" href="#about">Learn More</a>
+            <a class="btn outline" href="#gallery">Explore Gallery</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="images/hero-monitor.png" alt="MONITOR 2k25 illustration" class="feature-img">
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <section id="top" class="hero">
-        <div class="sub-container hero-grid">
-          <div class="hero-text">
-            <h1 class="neon">MONITOR 2k25</h1>
-            <p class="lead">
-              Masa Orientasi Mahasiswa Baru <strong>Teknik Informatika</strong><br>
-              UIN Sunan Gunung Djati Bandung.
-            </p>
-            <p class="tagline">
-              “Membentuk Mahasiswa Teknik Informatika yang <strong>Sakti</strong> dan 
-              <strong>Berdaya Saing</strong> dalam Melawan Disrupsi Digital di Era 
-              <span class="accent">Society 5.0</span>.”
-            </p>
-            <div class="cta-row">
-              <a class="btn" href="#about">Learn More</a>
-              <a class="btn outline" href="#gallery">Explore Gallery</a>
+  <section id="about" class="panel">
+    <div class="container">
+      <div class="sub-container">
+        <h2>About MONITOR 2k25</h2>
+        <p><strong>MONITOR (Masa Orientasi Teknik Informatika)</strong> 2k25 adalah kegiatan pengenalan jurusan bagi mahasiswa baru <strong>Program Studi Teknik Informatika</strong>, 
+        <strong>UIN Sunan Gunung Djati Bandung</strong>. Acara ini bertujuan untuk membentuk generasi Informatika yang tidak hanya menguasai teknologi, 
+        tetapi juga <em>tangguh, kreatif, dan siap bersaing</em> menghadapi tantangan 
+        <span class="accent">disrupsi digital</span> di era Society 5.0.</p>
+
+        <h2>SAKTI</h2>
+        <p><strong>SAKTI</strong> is an abbreviation of <strong>SOLID</strong>, <strong>AKTIF</strong>, <strong>KREATIF</strong>, <strong>TRANSFORMATIF</strong>, and last but not least, <strong>Islamic</strong>.</p>
+        <ul class="about-points">
+          <li><strong>SOLID</strong> — saling membantu dan tumbuh bersama.</li>
+          <li><strong>AKTIF</strong> — berpartisipasi dalam kegiatan & kontribusi.</li>
+          <li><strong>KREATIF</strong> — menciptakan solusi inovatif.</li>
+          <li><strong>TRANSFORMATIF</strong> — membawa perubahan positif.</li>
+          <li><strong>ISLAMI</strong> — menjunjung tinggi nilai-nilai Islam.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="panel">
+    <div class="container">
+      <div class="sub-container">
+        <h2>Gallery</h2>
+        <div class="grid gallery-grid">
+          <a href="resume.html?img=thumb1.jpg"><img src="images/thumb1.jpg" alt="thumb 1" class="img-thumb" /></a>
+          <a href="resume.html?img=thumb2.jpg"><img src="images/thumb2.jpg" alt="thumb 2" class="img-thumb" /></a>
+          <a href="resume.html?img=thumb3.jpg"><img src="images/thumb3.jpg" alt="thumb 3" class="img-thumb" /></a>
+          <a href="resume.html?img=thumb4.jpg"><img src="images/thumb4.jpg" alt="thumb 4" class="img-thumb" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="panel">
+    <div class="container">
+      <div class="sub-container contact-grid">
+        <div>
+          <h2>Contact</h2>
+          <p>Fill the form to send a message.</p>
+          <form id="contactForm" class="form" action="https://formsubmit.co/keenanr10@gmail.com" method="POST">
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" placeholder="Your name" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" placeholder="you@example.com" required>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" placeholder="Write something rad..." rows="5" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn">Send</button>
             </div>
-          </div>
-          <div class="hero-art">
-            <img src="images/hero-monitor.png" alt="MONITOR 2k25 illustration" class="feature-img">
-          </div>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
         </div>
-      </section>
-
-      <section id="about" class="panel">
-        <div class="sub-container">
-          <h2>About MONITOR 2k25</h2>
-          <p>
-            <strong>MONITOR (Masa Orientasi Teknik Informatika)</strong> 2k25 adalah kegiatan pengenalan jurusan bagi mahasiswa baru 
-            <strong>Program Studi Teknik Informatika</strong>, <strong>UIN Sunan Gunung Djati Bandung</strong>. 
-            Acara ini bertujuan untuk membentuk generasi Informatika yang tidak hanya menguasai teknologi, 
-            tetapi juga <em>tangguh, kreatif, dan siap bersaing</em> menghadapi tantangan 
-            <span class="accent">disrupsi digital</span> di era Society 5.0.
-          </p>
-
-          <h2>SAKTI</h2>
-          <p>
-            <strong>SAKTI</strong> is an abbreviation of 
-            <strong>SOLID</strong>, <strong>AKTIF</strong>, 
-            <strong>KREATIF</strong>, <strong>TRANSFORMATIF</strong>, 
-            and last but not least, <strong>ISLAMI</strong>.
-          </p>
-          <ul class="about-points">
-            <li><strong>SOLID</strong> — </li>
-            <li><strong>AKTIF</strong></li>
-            <li><strong>KREATIF</strong></li>
-            <li><strong>TRANSFORMATIF</strong></li>
-            <li><strong>ISLAMI</strong></li>
+        <aside class="contact-aside">
+          <h3 class="retro-subtitle">Quick Links</h3>
+          <ul class="quick-links">
+            <li><a href="https://github.com/ken-taki39" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            <li><a href="#"><i class="fas fa-play-circle"></i> Demo</a></li>
           </ul>
-        </div>
-      </section>
+          <p class="small">© <span id="year"></span> Your Name — Crafted with neon & nostalgia.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
 
-      <section id="gallery" class="panel">
-        <div class="sub-container">
-          <h2>Gallery</h2>
-          <div class="grid gallery-grid">
-            <a href="resume.html?img=thumb1.jpg">
-              <img src="images/thumb1.jpg" alt="thumb 1" class="img-thumb" />
-            </a>
-            <a href="resume.html?img=thumb2.jpg">
-              <img src="images/thumb2.jpg" alt="thumb 2" class="img-thumb" />
-            </a>
-            <a href="resume.html?img=thumb3.jpg">
-              <img src="images/thumb3.jpg" alt="thumb 3" class="img-thumb" />
-            </a>
-            <a href="resume.html?img=thumb4.jpg">
-              <img src="images/thumb4.jpg" alt="thumb 4" class="img-thumb" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="panel">
-        <div class="sub-container contact-grid">
-          <div>
-            <h2>Contact</h2>
-            <p>
-              Fill the form to send a message. This uses a free Formspree endpoint by default — 
-              see instructions below to swap to your backend.
-            </p>
-            <form id="contactForm" class="form" action="https://formsubmit.co/keenanr10@gmail.com" method="POST">
-              <label>
-                <span>Name</span>
-                <input name="name" type="text" placeholder="Your name" required>
-              </label>
-              <label>
-                <span>Email</span>
-                <input name="email" type="email" placeholder="you@example.com" required>
-              </label>
-              <label>
-                <span>Message</span>
-                <textarea name="message" placeholder="Write something rad..." rows="5" required></textarea>
-              </label>
-
-              <div class="form-actions">
-                <button type="submit" class="btn">Send</button>
-              </div>
-
-              <p id="formStatus" class="form-status" aria-live="polite"></p>
-            </form>
-          </div>
-
-          <aside class="contact-aside">
-            <h3 class="retro-subtitle">Quick Links</h3>
-            <ul class="quick-links">
-              <li>
-                <a href="https://github.com/ken-taki39" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener">
-                  <i class="fas fa-play-circle"></i> Demo
-                </a>
-              </li>
-            </ul>
-            <p class="small">© <span id="year"></span> Your Name — Crafted with neon & nostalgia.</p>
-          </aside>
-        </div>
-      </section>
-
-    </main>
-  </div>
+  <section id="resume">
+    <div class="container-resume">
+      <div class="resume-hero">
+        <img src="images/thumb1.jpg" alt="Profile" class="resume-hero-img">
+        <h1 class="retro-title">Resume</h1>
+      </div>
+      <div class="retro-box">
+        <h2>Experience</h2>
+        <ul>
+          <li>Frontend Developer at Example Corp</li>
+          <li>UI/UX Designer for RetroWave Studio</li>
+        </ul>
+      </div>
+      <div class="retro-box">
+        <h2>Education</h2>
+        <ul>
+          <li>B.Sc. in Informatics — UIN Sunan Gunung Djati Bandung</li>
+        </ul>
+      </div>
+      <div class="resume-footer">
+        <a href="#top" class="retro-back">↑ Back to Top</a>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container">
