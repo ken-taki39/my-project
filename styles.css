@@ -159,7 +159,6 @@ body{
   100% { transform: translate(0, 0); }
 }
 
-
 .container {
   max-width: var(--container);
   margin: 2rem auto;
@@ -177,6 +176,39 @@ body{
   box-shadow:
     0 0 20px rgba(0, 255, 213, 0.15),
     0 0 40px rgba(255, 60, 172, 0.1);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+
+  background: linear-gradient(
+    135deg,
+    #ff3cac,
+    #784ba0,
+    #2b86c5,
+    #00ffd5,
+    #ff3cac
+  );
+  background-size: 400% 400%;
+  animation: neonFlow 8s linear infinite;
+
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                 linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+          mask-composite: exclude;
+
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes neonFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .hero-container {
