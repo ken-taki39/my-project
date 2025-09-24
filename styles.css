@@ -101,10 +101,10 @@ body{
 }
 
 .synthwave-bg::before {
-  pointer-events: none;
-  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0; left: 0; right: 0; bottom:
+  pointer-events: none;
+  content: ""; 0;
   background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
   opacity: 0.6;
   animation: twinkle 6s infinite alternate;
@@ -166,7 +166,7 @@ body{
   margin: 2rem auto;
   padding: 2rem;
   position: relative;
-  z-index: 2;
+  z-index: 10;
 
   background: rgba(16, 12, 22, 0.85);
   backdrop-filter: blur(8px);
