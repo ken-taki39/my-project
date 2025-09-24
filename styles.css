@@ -162,37 +162,39 @@ body{
 }
 
 .container {
-  max-width: var(--container);
-  margin: 2rem auto;
-  padding: 2rem;
   position: relative;
-  z-index: 10;
+  z-index: 2;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
 
-  background: rgba(16, 12, 22, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(16, 12, 22, 0.6);
+  backdrop-filter: blur(8px) saturate(140%);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
 
-  border-radius: 18px;
-  overflow: hidden;
+  border: 2px solid rgba(255, 60, 172, 0.6);
+  box-shadow: 
+    0 0 12px rgba(0, 255, 213, 0.4),
+    0 0 24px rgba(255, 60, 172, 0.3),
+    inset 0 0 20px rgba(0, 255, 213, 0.1);
 
-  box-shadow:
-    0 0 20px rgba(0, 255, 213, 0.25),
-    0 0 40px rgba(255, 60, 172, 0.2);
-  border: 2px solid transparent;
-  background-image: linear-gradient(
-    135deg,
-    rgba(255, 60, 172, 0.4),
-    rgba(0, 255, 213, 0.4)
-  );
-  background-origin: border-box;
-  background-clip: border-box, padding-box, content-box; /*lol*/
-  animation: neonFlow 6s linear infinite;
+  color: #00ffd5;
+  text-shadow: 0 0 6px #00ffd5, 0 0 12px #ff3cac;
+  animation: pulseGlow 3s infinite alternate ease-in-out;
 }
 
-@keyframes neonFlow {
-  0%   { box-shadow: 0 0 15px #ff3cac, 0 0 25px #00ffd5; }
-  50%  { box-shadow: 0 0 25px #ff3cac, 0 0 40px #00ffd5; }
-  100% { box-shadow: 0 0 15px #ff3cac, 0 0 25px #00ffd5; }
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 
+      0 0 10px rgba(0, 255, 213, 0.3),
+      0 0 20px rgba(255, 60, 172, 0.2);
+  }
+  100% {
+    box-shadow: 
+      0 0 20px rgba(0, 255, 213, 0.5),
+      0 0 40px rgba(255, 60, 172, 0.4);
+  }
 }
 
 .hero-container {
