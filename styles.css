@@ -102,9 +102,9 @@ body{
 
 .synthwave-bg::before {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom:
+  top: 0; left: 0; right: 0; bottom: 0;
   pointer-events: none;
-  content: ""; 0;
+  content: "";
   background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
   opacity: 0.6;
   animation: twinkle 6s infinite alternate;
@@ -185,7 +185,7 @@ body{
     rgba(0, 255, 213, 0.4)
   );
   background-origin: border-box;
-  background-clip: padding-box, border-box;
+  background-clip: border-box, padding-box, content-box; /*lol*/
   animation: neonFlow 6s linear infinite;
 }
 
