@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>MONITOR 2k25 | SAKTI</title>
+  <title>MONITOR 2k25 | SAKTI</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -11,26 +11,27 @@
   <meta name="theme-color" content="#0b0712">
 </head>
 
-  <body class="retro synthwave-bg" id="top">
+<body class="retro">
+  <div class="synthwave-bg"></div>
   <div class="grain"></div>
 
-<header class="nav">
-  <div class="hero-container">
-  <a class="brand" href="#top">
-  <img src="images/kotlin-logo.png" alt="Kotlin Logo" class="kotlin-logo">
-  </a>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-<div class="container">
-  
+  <header class="nav">
+    <div class="hero-container">
+      <a class="brand" href="#top">
+        <img src="images/kotlin-logo.png" alt="Kotlin Logo" class="kotlin-logo">
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <section class="hero container ">
-      <div class="hero-grid">
+    <!-- Hero -->
+    <section id="top" class="hero">
+      <div class="container hero-grid">
         <div class="hero-text">
           <h1 class="neon">MONITOR 2k25</h1>
           <p class="lead">Masa Orientasi Mahasiswa Baru <strong>Teknik Informatika</strong><br>UIN Sunan Gunung Djati Bandung.</p>
@@ -45,44 +46,47 @@
         </div>
       </div>
     </section>
-    
-    <section id= "about" class= "panel container" >
-            
-      <h2>About MONITOR 2k25</h2>
-      <p><strong>MONITOR (Masa Orientasi Teknik Informatika)</strong> 2k25 adalah kegiatan pengenalan jurusan bagi mahasiswa baru <strong>Program Studi Teknik Informatika</strong>, 
-      <strong>UIN Sunan Gunung Djati Bandung</strong>. Acara ini bertujuan untuk membentuk generasi Informatika yang tidak hanya menguasai teknologi, 
-      tetapi juga <em>tangguh, kreatif, dan siap bersaing</em> menghadapi tantangan 
-      <span class="accent">disrupsi digital</span> di era Society 5.0.</p>
 
-      <h2>SAKTI</h2>
-      <p><strong>SAKTI</strong> is an abbreviation of <strong>SOLID</strong>, <strong>AKTIF</strong>, <strong>KREATIF</strong>, <strong>TRANSFORMATIF</strong>, and last but not least, <strong>Islamic</strong>.</p>
-       <ul class="about-points">
-      <li><strong>SOLID</strong> — </li>
-      <li><strong>AKTIF</strong></li>
-      <li><strong>KREATIF</strong></li>
-      <li><strong>TRANSFORMATIF</strong></li>
-      <li><strong>ISLAMI</strong></li>
-       </ul>
+    <!-- About -->
+    <section id="about" class="panel">
+      <div class="container">
+        <h2>About MONITOR 2k25</h2>
+        <p><strong>MONITOR (Masa Orientasi Teknik Informatika)</strong> 2k25 adalah kegiatan pengenalan jurusan bagi mahasiswa baru <strong>Program Studi Teknik Informatika</strong>, 
+        <strong>UIN Sunan Gunung Djati Bandung</strong>. Acara ini bertujuan untuk membentuk generasi Informatika yang tidak hanya menguasai teknologi, 
+        tetapi juga <em>tangguh, kreatif, dan siap bersaing</em> menghadapi tantangan 
+        <span class="accent">disrupsi digital</span> di era Society 5.0.</p>
+
+        <h2>SAKTI</h2>
+        <p><strong>SAKTI</strong> is an abbreviation of <strong>SOLID</strong>, <strong>AKTIF</strong>, <strong>KREATIF</strong>, <strong>TRANSFORMATIF</strong>, and <strong>Islamic</strong>.</p>
+        <ul class="about-points">
+          <li><strong>SOLID</strong></li>
+          <li><strong>AKTIF</strong></li>
+          <li><strong>KREATIF</strong></li>
+          <li><strong>TRANSFORMATIF</strong></li>
+          <li><strong>ISLAMI</strong></li>
+        </ul>
+      </div>
     </section>
 
+    <!-- Gallery -->
     <section id="gallery" class="panel">
       <div class="container">
         <h2>Gallery</h2>
         <div class="grid gallery-grid">
-         
-  <a href="resume.html?img=thumb1.jpg"><img src="images/thumb1.jpg" alt="thumb 1" class="img-thumb" /></a>
-  <a href="resume.html?img=thumb2.jpg"><img src="images/thumb2.jpg" alt="thumb 2" class="img-thumb" /></a>
-  <a href="resume.html?img=thumb3.jpg"><img src="images/thumb3.jpg" alt="thumb 3" class="img-thumb" /></a>
-  <a href="resume.html?img=thumb4.jpg"><img src="images/thumb4.jpg" alt="thumb 4" class="img-thumb" /></a>
-  </div>
-  </div>
-  </section>
+          <a href="resume.html?img=thumb1.jpg"><img src="images/thumb1.jpg" alt="thumb 1" class="img-thumb" /></a>
+          <a href="resume.html?img=thumb2.jpg"><img src="images/thumb2.jpg" alt="thumb 2" class="img-thumb" /></a>
+          <a href="resume.html?img=thumb3.jpg"><img src="images/thumb3.jpg" alt="thumb 3" class="img-thumb" /></a>
+          <a href="resume.html?img=thumb4.jpg"><img src="images/thumb4.jpg" alt="thumb 4" class="img-thumb" /></a>
+        </div>
+      </div>
+    </section>
 
+    <!-- Contact -->
     <section id="contact" class="panel">
       <div class="container contact-grid">
         <div>
           <h2>Contact</h2>
-          <p>Fill the form to send a message. This uses a free Formspree endpoint by default — see instructions below to swap to your backend.</p>
+          <p>Fill the form to send a message. This uses a free Formspree endpoint by default.</p>
           <form id="contactForm" class="form" action="https://formsubmit.co/keenanr10@gmail.com" method="POST">
             <label>
               <span>Name</span>
@@ -96,29 +100,27 @@
               <span>Message</span>
               <textarea name="message" placeholder="Write something rad..." rows="5" required></textarea>
             </label>
-
             <div class="form-actions">
               <button type="submit" class="btn">Send</button>
             </div>
-
             <p id="formStatus" class="form-status" aria-live="polite"></p>
           </form>
         </div>
 
         <aside class="contact-aside">
-        <h3 class="retro-subtitle">Quick Links</h3>
-<ul class="quick-links">
-  <li>
-    <a href="https://github.com/ken-taki39" target="_blank" rel="noopener">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-  </li>
-  <li>
-    <a href="#" target="_blank" rel="noopener">
-      <i class="fas fa-play-circle"></i> Demo
-    </a>
-  </li>
-</ul>
+          <h3 class="retro-subtitle">Quick Links</h3>
+          <ul class="quick-links">
+            <li>
+              <a href="https://github.com/ken-taki39" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener">
+                <i class="fas fa-play-circle"></i> Demo
+              </a>
+            </li>
+          </ul>
           <p class="small">© <span id="year"></span> Your Name — Crafted with neon & nostalgia.</p>
         </aside>
       </div>
@@ -136,6 +138,7 @@
     <img id="modalImg" src="" alt="">
     <p id="modalCaption"></p>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
