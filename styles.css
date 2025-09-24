@@ -168,33 +168,31 @@ body{
   position: relative;
   z-index: 2;
 
-  background: rgba(16, 12, 22, 0.65);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(16, 12, 22, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
   border-radius: 18px;
-  border: 2px solid transparent;
-
-  border-image: linear-gradient(
-    135deg,
-    #ff3cac,
-    #784ba0,
-    #2b86c5,
-    #00ffd5,
-    #ff3cac
-  ) 1;
-
-  animation: neonFlow 8s linear infinite;
+  overflow: hidden;
 
   box-shadow:
-    0 0 20px rgba(0, 255, 213, 0.2),
-    0 0 40px rgba(255, 60, 172, 0.15);
+    0 0 20px rgba(0, 255, 213, 0.25),
+    0 0 40px rgba(255, 60, 172, 0.2);
+  border: 2px solid transparent;
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 60, 172, 0.4),
+    rgba(0, 255, 213, 0.4)
+  );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  animation: neonFlow 6s linear infinite;
 }
 
 @keyframes neonFlow {
-  0% { border-image-source: linear-gradient(135deg, #ff3cac, #784ba0, #2b86c5, #00ffd5, #ff3cac); }
-  50% { border-image-source: linear-gradient(315deg, #00ffd5, #2b86c5, #784ba0, #ff3cac, #00ffd5); }
-  100% { border-image-source: linear-gradient(135deg, #ff3cac, #784ba0, #2b86c5, #00ffd5, #ff3cac); }
+  0%   { box-shadow: 0 0 15px #ff3cac, 0 0 25px #00ffd5; }
+  50%  { box-shadow: 0 0 25px #ff3cac, 0 0 40px #00ffd5; }
+  100% { box-shadow: 0 0 15px #ff3cac, 0 0 25px #00ffd5; }
 }
 
 .hero-container {
